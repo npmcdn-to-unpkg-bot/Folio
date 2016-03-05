@@ -1,0 +1,16 @@
+.global-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	background: url(../img/bg.png) no-repeat;
+}
+
+.wrapper-content {
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.column {
+	display: flex;
+	justify-content: space-between;
+}

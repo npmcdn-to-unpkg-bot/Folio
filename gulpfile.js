@@ -7,7 +7,7 @@ var gulp = require("gulp"),
 		autoprefixer = require("autoprefixer"),
 		rename = require("gulp-rename"),
 		imagemin = require("gulp-imagemin"),
-		combineMq = require("gulp-combine-mq"),
+		// combineMq = require("gulp-combine-mq"),
 		uglify = require('gulp-uglify'),
 		concat = require('gulp-concat'),
 		minifyCss = require('gulp-minify-css'),
@@ -15,14 +15,14 @@ var gulp = require("gulp"),
 		jade = require('gulp-jade'),
 		browserSync = require('browser-sync').create();
 
-var scriptList = [
-	'source/js/common.js'
-]
+// var scriptList = [
+// 	'source/js/common.js'
+// ]
 
 gulp.task("build",["style", "images", "script", "jade"]);
 
 gulp.task("style", function() {
-	return gulp.src("source/sass/style.{sass,scss}")
+	return gulp.src("sass/style.{sass,scss}")
 		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: 'expanded'
@@ -30,14 +30,14 @@ gulp.task("style", function() {
 		.pipe(postcss([
 			autoprefixer({browsers: "last 2 versions"})
 		]))
-		.pipe(combineMq({
-			beautify: false
-		}))
+		// .pipe(combineMq({
+		// 	beautify: false
+		// }))
 		.pipe(minifyCss())
 		.pipe(rename({
 				suffix: ".min"
 		}))
-		.pipe(gulp.dest("build/css"))
+		.pipe(gulp.dest("css"))
 		.pipe(browserSync.stream());
 });
 
@@ -72,13 +72,14 @@ gulp.task("jade", function() {
 });
 
 // Static Server + watching scss/html files
-gulp.task('server', ['style', 'jade', 'script'], function() {
+gulp.task('server', ['style', 'jade'], function() {
 
 		browserSync.init({
 				server: "./",
 				open: false
 		});
 
+		gulp.watch("sass/*.scss", ['style']);
 		gulp.watch("sass/**/*.scss", ['style']);
 		gulp.watch("jade/*.jade", ['jade']);
 		gulp.watch("js/*.js", ['script']);
