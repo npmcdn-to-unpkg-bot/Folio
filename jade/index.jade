@@ -29,19 +29,20 @@ html(lang='en')
 								img.slider_img(src='img/slider-5.png')
 							.slider__item
 								img.slider_img(src='img/slider-6.png')
-							.slider__item
-								img.slider_img(src='img/slider-7.png')
-				.menu
-					menu.menu__list
-						li.menu__item
-							a.menu__link(href='#') Home
-						li.menu__item
-							a.menu__link(href='#') About
-						li.menu__item
-							a.menu__link(href='#') Services
-						li.menu__item
-							a.menu__link(href='#') Portfolio
-						li.menu__item
-							a.menu__link(href='#') Contact
-					.copyright
-						p.copyright__text Copyright Folio 2012. All Rights Reserved.
+							//- .slider__item
+							//- 	img.slider_img(src='img/slider-7.png')
+			.menu
+				menu.menu__list.wrapper-content
+					li.menu__item
+						a.menu__link(href='#') Home
+					li.menu__item
+						a.menu__link(href='#') About
+					li.menu__item
+						a.menu__link(href='#') Services
+					li.menu__item
+						a.menu__link(href='#') Portfolio
+					li.menu__item
+						a.menu__link(href='#') Contact
+				.copyright.wrapper-content
+					p.copyright__text Copyright Folio 2012. All Rights Reserved.
+	script(src='https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js')

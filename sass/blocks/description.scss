@@ -1,0 +1,18 @@
+.description {
+	&__title {
+		margin: 80px 0 0 0;
+		padding: 13px 17px;
+		width: 161px;
+		background: #717070;
+		color: $white;
+		font-size: 24px;
+		letter-spacing: 0.7px;
+		text-transform: uppercase;
+	}
+	&__text {
+		margin: 0;
+		padding: 15px 19px 15px 15px;
+		background: $white;
+		font-style: italic;
+	}
+}

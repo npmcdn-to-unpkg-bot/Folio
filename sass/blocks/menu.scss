@@ -1,0 +1,24 @@
+.menu {
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	min-height: 46px;
+	background: $white;
+	&__list {
+		display: flex;
+		justify-content: space-around;
+		width: 500px;
+	}
+	&__item {
+		@include list-decoration;
+	}
+	&__link {
+		@include link-decoration;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__link:hover {
+		color: $text-color-active;
+	}
+}
+

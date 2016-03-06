@@ -1,5 +1,12 @@
 @import "./node_modules/normalize.css/normalize";
+@import "./sass/general/fonts.scss";
+@import "./sass/general/_variables.scss";
+@import "./sass/general/_mixins.scss";
 
 @import "./sass/general/base.scss";
 
 @import "./sass/blocks/wrapper-global.scss";
+@import "./sass/blocks/description.scss";
+@import "./sass/blocks/slider.scss";
+@import "./sass/blocks/menu.scss";
+@import "./sass/blocks/copyrighting.scss";

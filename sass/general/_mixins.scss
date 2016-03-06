@@ -1,0 +1,17 @@
+@mixin text-base {
+	font: {
+		family: $font-family-base;
+		size: $font-size-base;
+		weight: 400;
+	}
+	color: $text-color;
+}
+
+@mixin list-decoration {
+	list-style-type: none;
+}
+
+@mixin link-decoration {
+	text-decoration: none;
+	color: $text-color;
+}
