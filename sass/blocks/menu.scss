@@ -1,9 +1,20 @@
 .menu {
+	position: relative;
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	min-height: 46px;
 	background: $white;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -7px;
+		height: 7px;
+		width: 634px;
+		background: #6e806b;
+		opacity: 0.5;
+	}
 	&__list {
 		display: flex;
 		justify-content: space-around;
@@ -14,11 +25,25 @@
 	}
 	&__link {
 		@include link-decoration;
+		padding: 10px;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
 	&__link:hover {
+		position: relative;
 		color: $text-color-active;
+	}
+	&__link:hover:before {
+		position: absolute;
+		content: "";
+		display: block;
+		top: -16px;
+		left: 42%;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 7px 8px;
+		border-color: transparent transparent #fff transparent;
 	}
 }
 
