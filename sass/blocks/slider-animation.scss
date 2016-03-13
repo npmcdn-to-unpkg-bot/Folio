@@ -1,0 +1,27 @@
+//urls
+$url_0: url(../img/bg.png) no-repeat;
+$url_1: url(../img/bg-2.png) no-repeat;
+$url_2: url(../img/bg-3.png) no-repeat;
+$url_3: url(../img/bg-4.png) no-repeat;
+$url_4: url(../img/bg-5.png) no-repeat;
+
+@keyframes slider {
+	0% {
+		background: $url_0;
+	}
+	20% {
+		background: $url_1;
+	}
+	40% {
+		background: $url_2;
+	}
+	60% {
+		background: $url_3;
+	}
+	80% {
+		background: $url_4;
+	}
+	100% {
+		background: $url_0;
+	}
+}

@@ -1,7 +1,10 @@
 .global-wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
-	background: url(../img/bg.png) no-repeat;
+	// background: url(../img/bg.png) no-repeat;
+	animation: slider 30s infinite;
+	width: 100%;
+	height: 100%;
 }
 
 .wrapper-content {

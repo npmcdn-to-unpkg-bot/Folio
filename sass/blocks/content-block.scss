@@ -1,0 +1,17 @@
+.content-block {
+	width: 700px;
+	background: rgba(255,255,255,0.90);
+	padding: 0 36px;
+	&__title {}
+	&__text {
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	&__img {
+		float: left;
+		margin: 2px 24px 24px 0px;
+	}
+	&__cite {
+		@extend .content-block__text;
+	}
+}
